@@ -1,0 +1,83 @@
+http://iwanttolearnruby.com/
+
+Regularni vyrazy
+
+/^[Rr]egular expressions?$/
+
+^  zacatek tekstu
+
+[ ] mozne hodnoty v zavorkah   [Rr]
+
+?  pred dotaznikem, nepovinne pismenko   ("s" neni povinny)
+
+$  ^ahoj$   vysledek ahoj
+    ahoj$   vysledek ahojxxxxx
+
+. libovolny znak
+
+/^A.HOJ?$/     AHOJ, AJOJ,AKOJ   atd
+
+* libovolny pocet znaku
+
+
+///////////////////////////////////////////////
+/^[0-9]?$/    0,1..9,""     vypise 10 znaku
+
+/^A{2,5}$     AA,AAA,AAAA,AAAAA           rozsah
+
+/^A{ ,5}$/	od 1 do 5 Acek     
+
+|        bud tohle nebo tohle
+/^[0-9]|{Ahy}$
+
+\        krome
+\D       vseho krome cislic
+/ #{promenna} /      dosadime promennu
+
+///////////////////////////////////////////////
+gsub    global sustetution nahrazeni
+x = "hello1234"
+reg_exp = /\d/
+y = x.gsub(reg_exp,"_")  
+puts y        #=> "hello____"
+puts x        #=> "hello1234"
+
+
+///////////////////////////////////////////////
+MODULY
+Kernel          modul, ktery drzi metody
+
+///////////////////////////////////////////////
+Omezeni pristupu
+public  default
+protected
+private
+
+///////////////////////////////////////////////
+Pripojit soubor
+require 'ScriptA.rb'
+
+///////////////////////////////////////////////
+Validator http://jsonlint.com/
+
+JSON
+require 'json'
+jsonPole=[ {"name" => "Rex", "race" => "Nìmecký ovèák"},
+       {"name" => "Lassie", "race" => "Dlouhosrstá kolie"}]
+puts jsonPole.to_json
+
+
+puts jj jsonPole
+
+VYSLEDEK
+[
+  {
+    "name": "Rex",
+    "race": "Nìmecký ovèák"
+  },
+  {
+    "name": "Lassie",
+    "race": "Dlouhosrstá kolie"
+  }
+]
+

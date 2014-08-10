@@ -1,0 +1,173 @@
+irb(main):007:0> puts 1*2;puts 1+4
+2
+5
+nil
+irb(main):009:0> puts 1*2;puts 4/3
+2
+1
+nil
+irb(main):014:0> puts 1.0/2.0
+0.5
+nil
+
+puts double/int 
+puts int/double 
+puts double/double
+
+
+//////////////////////////////////////////////
+TABULATOR
+irb(main):026:0> puts "text\ttext"
+text	text
+nil
+irb(main):027:0> puts "ahoj\aahoj"
+ahojahoj
+nil
+
+Range
+1..10  // 1-10
+1...10 // 1-9
+
+
+//////////////////////////////////////////////
+POLE
+irb(main):009:0> puts [2,3,4][1]
+3
+nil
+
+irb(main):008:0> puts [2,3,4]
+2
+3
+4
+nil
+
+POLE 
+1 2
+3 5
+
+irb(main):018:0> puts [[1,2],[3,5]][1][1]
+5
+nil
+irb(main):019:0> puts [[1,2],[3,5]][0][1]
+2
+nil
+
+HASH
+irb(main):024:0> {'name'=>'Jan', 'surname'=>'Kafka'}['name']
+"Jan"
+irb(main):025:0> {'1'=>'Jan', '2'=>'Kafka'}['2']
+"Kafka"
+
+
+//////////////////////////////////////////////
+PROMENNE
+a=5
+a+a
+a=nil  //smazat promenu
+puts a
+puts 'a'
+
+VYTVORIT pole s hashem
+pole1=[{'name'=>'Gulnara','surname'=>'Abilova'},{'name'=>'Ben','surname'=>'Bitt'}]
+[{"name"=>"Gulnara", "surname"=>"Abilova"}, {"name"=>"Ben", "surname"=>"Bitt"}]
+
+irb(main):055:0> puts pole1 [0]
+{"name"=>"Gulnara", "surname"=>"Abilova"}
+nil
+irb(main):056:0> puts pole1 [0]['name']
+Gulnara
+nil
+
+
+//////////////////////////////////////////////
+Boolean
+irb(main):074:0> puts 5>4
+true
+nil
+
+//////////////////////////////////////////////
+PODMINKA
+irb(main):001:0> if
+ 5>1 
+ puts 'true'
+ else 
+ puts 'false'
+ end
+true
+nil
+
+gander=2;if
+ gander==1
+ puts 'man'
+ else 
+ puts 'woman'
+ end
+woman
+nil
+
+irb(main):064:0> prom=(5>4)?true:false
+true
+irb(main):065:0> prom
+true
+irb(main):066:0> !prom
+false
+
+
+//////////////////////////////////////////////
+CASE
+
+irb(main):136:0> x=10;y=7;
+case (y-x)
+ when 3 then
+ puts 'true'
+ when -3 then
+ puts 'false'
+ end
+false
+
+//////////////////////////////////////////////
+POLE
+ pole=1..5;for cont in pole
+ puts cont
+ end
+1
+2
+3
+4
+5
+
+
+CTRL+SHIFT+C   komentar v Eclipse for all
+METHODS
+def methoda(input)
+  return input*4
+end
+
+worm=4
+broken=methoda(worm)
+puts broken
+
+
+//////////////////////////////////////////////
+for count in 1..10
+ print "."
+ end
+..........1..10
+
+
+//////////////////////////////////////////////
+za 10 sec napishe AHOJ
+
+sleep 10; puts "ahoj
+
+//////////////////////////////////////////////
+SCANNER v RUBY is gets :)
+
+puts "Whats your name";
+def nameGet(name)
+  return name
+end
+name=gets;
+sleep 10;
+getN=nameGet(name);
+puts getN

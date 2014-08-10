@@ -1,0 +1,84 @@
+//////////////////////////////////////////////
+Dedicnost
+Class subclass < Superclass
+http://ruby-doc.com
+
+//////////////////////////////////////////////
+irb(main):001:0> 3.to_s
+"3"
+
+irb(main):002:0> 3.class
+Fixnum
+
+irb(main):004:0> 3.to_f
+3.0
+
+
+//////////////////////////////////////////////
+ODRIZNOUT prazdne retezce
+irb(main):011:0> x=gets
+ahoj
+"ahoj\n"
+
+irb(main):010:0> x=gets.strip
+ahoj
+"ahoj"
+
+irb(main):013:0> x=gets.upcase.strip
+ahoj
+"AHOJ"
+
+
+
+//////////////////////////////////////////////
+x="jan"
+NEDESTRUKTIVNI
+nemeni objekt
+irb(main):015:0> x.chomp("n")
+"ja"
+
+irb(main):016:0> x
+"jan"
+
+DESTRUKTIVNI
+meni objekt
+irb(main):017:0> x.chomp!("n")
+"ja"
+
+irb(main):018:0> x
+"ja"
+
+//////////////////////////////////////////////
+SIZE
+irb(main):020:0> 'ahoj'.size
+4
+
+//////////////////////////////////////////////
+Vypishe vsihni objekty
+irb(main):028:0> puts "hello world!".methods
+
+irb(main):028:0> puts "hello world!".methods.size
+178
+
+//////////////////////////////////////////////
+
+[1,2,3,4,5,6].each do|x| 
+puts x 
+end
+1
+2
+3
+4
+5
+6
+[1, 2, 3, 4, 5, 6]
+
+//////////////////////////////////////////////
+Vyjimka
+tam kde chyba nastala
+rescue StandardError => error
+  puts error.backtrace
+end
+
+kus kodu, ktera vzdy se provede
+ensure
